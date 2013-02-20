@@ -15,35 +15,15 @@
         <dependency>
             <groupId>org.dts.spell</groupId>
             <artifactId>jmyspell-myspell-dictionary</artifactId>
-        </dependency>        
+        </dependency>
         <dependency>
             <groupId>org.dts.spell</groupId>
             <artifactId>jmyspell-swing</artifactId>
-        </dependency>        
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <!--build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <configuration>
-                        <excludes>
-                            <exclude>**/org/dts/spell/examples/Example*.java</exclude>
-                            <exclude>**/org/dts/spell/examples/JMySpellApplet.java</exclude>
-                        </excludes>
-                        <includes>
-                            <include>**/org/dts/spell/examples/Example1.java</include>
-                            <include>**/org/dts/spell/examples/Example2.java</include>
-                        </includes>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build-->
 </project>
