@@ -1,0 +1,74 @@
+### Properties used by jEdit
+plugin.org.dts.spell.jedit.JMySpellPlugin.activate = startup
+
+plugin.org.dts.spell.jedit.JMySpellPlugin.name = JMySpell
+plugin.org.dts.spell.jedit.JMySpellPlugin.author = DreamTangerine
+plugin.org.dts.spell.jedit.JMySpellPlugin.version = 0.0.1
+plugin.org.dts.spell.jedit.JMySpellPlugin.docs = org/dts/spell/jedit/config/index.html
+plugin.org.dts.spell.jedit.JMySpellPlugin.jars = jmyspell-core.jar jmyspell-swing.jar
+
+### These tell jEdit what JDK and jEdit version we require
+
+plugin.org.dts.spell.jedit.JMySpellPlugin.depend.0 = jedit 04.02.02.00
+plugin.org.dts.spell.jedit.JMySpellPlugin.depend.1 = jdk 1.5
+
+
+### Menu
+plugin.org.dts.spell.jedit.JMySpellPlugin.menu =jmyspell.spell-check \
+jmyspell.reset-ignore-list \
+jmyspell.unload-dictionary
+
+jmyspell.spell-check.label = Check spelling
+jmyspell.reset-ignore-list.label = Reset ignored words
+jmyspell.unload-dictionary.label = Unload dictionary
+
+## Error Messages
+jmyspell.no-error.found = No spelling errors found
+jmyspell.no-init = SpellChecker is not init.
+jmyspell.error.dictionary.not-found = Error loading dictionary.\
+\nBe sure the file exits and is in correct format (an OpenOffice.org dictionary)  
+jmyspell.filter.description = Dictionary files (*.zip, *.dic, *.aff)
+
+
+### Option panel labels
+
+plugin.org.dts.spell.jedit.JMySpellPlugin.option-group = jmyspell-properties \
+	jmyspell-modes
+
+options.jmyspell-properties.label = Properties
+options.jmyspell-properties.code = new org.dts.spell.jedit.JMySpellOptionPane();
+
+options.jmyspell-properties.dictionary.title.label = Dictionary
+options.jmyspell-properties.dictionary.browse = Browse...
+options.jmyspell-properties.dictionary.label = Dictionary file : 
+
+options.jmyspell-properties.options.title.label = Dictionary Options
+options.jmyspell-properties.options.auto-load.label = Load dictionary on start ?
+options.jmyspell-properties.options.auto-reset.label = Reset ignored words after each spellcheck ?
+
+options.jmyspell-properties.spell-options.title.label = Spell Options
+options.jmyspell-properties.spell-options.ignore-uppercase.label = Ignore uppercase words ?
+options.jmyspell-properties.spell-options.ignore-case.label = Ignore case of words ?
+options.jmyspell-properties.spell-options.ignore-numbers.label = Ignore numbers ?
+
+
+options.jmyspell-modes.label = Modes
+options.jmyspell-modes.code = new org.dts.spell.jedit.ModesOptionPane();
+
+options.jmyspell-modes.modes.label = Mode :
+options.jmyspell-modes.tokens.label = Tokens :
+options.jmyspell-modes.disable-mode.label = Enable mode-specific checking ?
+options.jmyspell-modes.default.label = Normal text
+
+### SpellChecker Options
+
+options.jmyspell.auto-load = false
+options.jmyspell.auto-reset = false
+options.jmyspell.dictionary =
+options.jmyspell.token-mode = true
+
+options.jmyspell.spell.ignore-uppercase = false
+options.jmyspell.spell.ignore-case = false
+options.jmyspell.spell.ignore-digits = true
+
+## TODO : Put tokens for each mode.

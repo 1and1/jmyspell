@@ -1,0 +1,3 @@
+org.dts.spell.swing.panels.BadCaseSolutionPanel
+org.dts.spell.swing.panels.RepeatWordSolutionPanel
+org.dts.spell.swing.panels.SpellErrorSolutionPanel
