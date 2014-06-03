@@ -27,18 +27,21 @@
     <developers>
         <developer>
             <id>dreamtangerine</id>
+            <name>dreamtangerine</name>
             <roles>
                 <role>administrator</role>
             </roles>
         </developer>
         <developer>
             <id>hacklaen</id>
+            <name>hacklaen</name>
             <roles>
                 <role>observer</role>
             </roles>
         </developer>
         <developer>
             <id>dressen</id>
+            <name>dressen</name>
             <roles>
                 <role>observer</role>
             </roles>
@@ -48,6 +51,9 @@
             <name>Mirko Friedenhagen</name>
             <url>https://github.com/mfriedenhagen/</url>
             <timezone>CET</timezone>
+            <roles>
+                <role>mavenizer</role>
+            </roles>
         </developer>
     </developers>
 
