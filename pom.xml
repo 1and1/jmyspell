@@ -69,6 +69,10 @@
         <connection>scm:git:git://github.com/1and1/jmyspell.git</connection>
         <url>https://github.com/1and1/jmyspell</url>
     </scm>
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/1and1/jmyspell/issues</url>
+    </issueManagement>
 
     <properties>
         <enforcer.skip>true</enforcer.skip>
