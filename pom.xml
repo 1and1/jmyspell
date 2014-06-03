@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>net.oneandone.maven.poms</groupId>
         <artifactId>foss-parent</artifactId>
         <version>1.4.8</version>
     </parent>
+
     <groupId>org.dts.spell</groupId>
     <artifactId>jmyspell</artifactId>
     <version>1.0-unitedinternet-2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <url>http://kenai.com/projects/jmyspell</url>
-    
     <name>jmyspell parent</name>
     <description>JMySpell is a 100% pure-Java implementation of the MySpell spell checker, licensed under the LGPL. This allows us to use the old dictionaries from OpenOffice.org in Java applications, whether they're J2SE applications or J2EE web applications. Since at the moment there is only one 100% Java Open-Source spell checker (Jazzy), and the inclusion of dictionaries is difficult, the objective of this project is to fill this gap.</description>
-    <scm>
-        <developerConnection>scm:git:ssh://git@github.com/1and1/jmyspell.git</developerConnection>
-        <connection>scm:git:git://github.com/1and1/jmyspell.git</connection>
-        <url>https://github.com/1and1/jmyspell</url>
-    </scm>
+    <url>http://kenai.com/projects/jmyspell</url>
+    <licenses>
+        <license>
+            <name>LGPL-2.1</name>
+            <url>http://opensource.org/licenses/lgpl-2.1.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <developers>
         <developer>
@@ -47,13 +50,20 @@
             <timezone>CET</timezone>
         </developer>
     </developers>
-    <licenses>
-        <license>
-            <name>LGPL-2.1</name>
-            <url>http://opensource.org/licenses/lgpl-2.1.php</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
+
+    <modules>
+        <module>jmyspell-core</module>
+        <module>jmyspell-myspell-dictionary</module>
+        <module>jmyspell-swing</module>
+        <module>jmyspell-examples</module>
+    </modules>
+
+    <scm>
+        <developerConnection>scm:git:ssh://git@github.com/1and1/jmyspell.git</developerConnection>
+        <connection>scm:git:git://github.com/1and1/jmyspell.git</connection>
+        <url>https://github.com/1and1/jmyspell</url>
+    </scm>
+
     <properties>
         <enforcer.skip>true</enforcer.skip>
         <pmd.failOnViolation>false</pmd.failOnViolation>
@@ -61,6 +71,7 @@
         <jacoco.haltOnFailure>false</jacoco.haltOnFailure>
         <checkstyle.failOnViolation>false</checkstyle.failOnViolation>
     </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -81,10 +92,4 @@
         </dependencies>
     </dependencyManagement>
 
-    <modules>
-        <module>jmyspell-core</module>
-        <module>jmyspell-myspell-dictionary</module>
-        <module>jmyspell-swing</module>
-        <module>jmyspell-examples</module>
-    </modules>
 </project>
