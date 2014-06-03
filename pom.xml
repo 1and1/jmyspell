@@ -73,6 +73,10 @@
         <system>GitHub</system>
         <url>https://github.com/1and1/jmyspell/issues</url>
     </issueManagement>
+    <ciManagement>
+        <system>Jenkins</system>
+        <url>https://huschteguzzel.de/hudson/job/jmyspell/</url>
+    </ciManagement>
 
     <properties>
         <enforcer.skip>true</enforcer.skip>
