@@ -4,11 +4,11 @@
     <parent>
         <groupId>net.oneandone.maven.poms</groupId>
         <artifactId>foss-parent</artifactId>
-        <version>1.3.5</version>
+        <version>1.4.8</version>
     </parent>
     <groupId>org.dts.spell</groupId>
     <artifactId>jmyspell</artifactId>
-    <version>1.0-unitedinternet-1</version>
+    <version>1.0-unitedinternet-2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <url>http://kenai.com/projects/jmyspell</url>
@@ -20,6 +20,7 @@
         <connection>scm:git:git://github.com/1and1/jmyspell.git</connection>
         <url>https://github.com/1and1/jmyspell</url>
     </scm>
+
     <developers>
         <developer>
             <id>dreamtangerine</id>
@@ -39,6 +40,12 @@
                 <role>observer</role>
             </roles>
         </developer>
+        <developer>
+            <id>mfriedenhagen</id>
+            <name>Mirko Friedenhagen</name>
+            <url>https://github.com/mfriedenhagen/</url>
+            <timezone>CET</timezone>
+        </developer>
     </developers>
     <licenses>
         <license>
@@ -49,6 +56,10 @@
     </licenses>
     <properties>
         <enforcer.skip>true</enforcer.skip>
+        <pmd.failOnViolation>false</pmd.failOnViolation>
+        <findbugs.failOnError>false</findbugs.failOnError>
+        <jacoco.haltOnFailure>false</jacoco.haltOnFailure>
+        <checkstyle.failOnViolation>false</checkstyle.failOnViolation>
     </properties>
     <dependencyManagement>
         <dependencies>

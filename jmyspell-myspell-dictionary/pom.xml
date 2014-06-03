@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.dts.spell</groupId>
         <artifactId>jmyspell</artifactId>
-        <version>1.0-unitedinternet-1</version>
+        <version>1.0-unitedinternet-2-SNAPSHOT</version>
     </parent>
     <artifactId>jmyspell-myspell-dictionary</artifactId>
     <dependencies>
