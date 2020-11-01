@@ -17,9 +17,14 @@
             <artifactId>jmyspell-myspell-dictionary</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.sourcetohtml</groupId>
-            <artifactId>sourcetohtml</artifactId>
-            <version>0.8.1</version>
+            <groupId>org.dts.spell</groupId>
+            <artifactId>jmyspell-swing</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.bitbucket.goalhub.simpleide</groupId>
+            <artifactId>jedit</artifactId>
+            <version>2.1.2</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

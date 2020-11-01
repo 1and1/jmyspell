@@ -1,8 +1,8 @@
 package org.dts.spell.jedit ;
 
 import org.dts.spell.SpellChecker ;
-import org.dts.spell.dictionary.OpenOfficeSpellDictionary ;
 import org.dts.spell.dictionary.SpellDictionary ;
+import org.dts.spell.dictionary.openoffice.OpenOfficeSpellDictionary;
 import org.gjt.sp.jedit.Macros ;
 import org.gjt.sp.jedit.View ;
 import org.gjt.sp.jedit.jEdit ;
