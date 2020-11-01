@@ -2,14 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.dts.spell</groupId>
+    <groupId>org.jitsi</groupId>
     <artifactId>jmyspell</artifactId>
     <version>1.0-jitsi-1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>jmyspell parent</name>
     <description>JMySpell is a 100% pure-Java implementation of the MySpell spell checker, licensed under the LGPL. This allows us to use the old dictionaries from OpenOffice.org in Java applications, whether they're J2SE applications or J2EE web applications. Since at the moment there is only one 100% Java Open-Source spell checker (Jazzy), and the inclusion of dictionaries is difficult, the objective of this project is to fill this gap.</description>
-    <url>http://kenai.com/projects/jmyspell</url>
+    <url>https://github.com/jitsi/jmyspell</url>
 
     <licenses>
         <license>
@@ -52,17 +52,17 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.dts.spell</groupId>
+                <groupId>org.jitsi</groupId>
                 <artifactId>jmyspell-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.dts.spell</groupId>
+                <groupId>org.jitsi</groupId>
                 <artifactId>jmyspell-myspell-dictionary</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.dts.spell</groupId>
+                <groupId>org.jitsi</groupId>
                 <artifactId>jmyspell-swing</artifactId>
                 <version>${project.version}</version>
             </dependency>

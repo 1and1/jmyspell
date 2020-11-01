@@ -4,7 +4,7 @@
     <packaging>bundle</packaging>
 
     <parent>
-        <groupId>org.dts.spell</groupId>
+        <groupId>org.jitsi</groupId>
         <artifactId>jmyspell</artifactId>
         <version>1.0-jitsi-1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
@@ -14,11 +14,11 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.dts.spell</groupId>
+            <groupId>org.jitsi</groupId>
             <artifactId>jmyspell-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.dts.spell</groupId>
+            <groupId>org.jitsi</groupId>
             <artifactId>jmyspell-swing</artifactId>
         </dependency>
         <dependency>

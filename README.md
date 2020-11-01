@@ -1,4 +1,6 @@
-#JMySpell
+MySpell
+----------
+
 JMySpell is a 100% pure-Java implementation of the MySpell spell checker, licensed under the LGPL. 
 This allows us to use the old dictionaries from OpenOffice.org in Java applications, 
 whether they're J2SE applications or J2EE web applications. 
