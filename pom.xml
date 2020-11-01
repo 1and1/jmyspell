@@ -4,7 +4,7 @@
 
     <groupId>org.jitsi</groupId>
     <artifactId>jmyspell</artifactId>
-    <version>1.0-jitsi-1</version>
+    <version>1.0-jitsi-2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>jmyspell parent</name>
