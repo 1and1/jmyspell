@@ -59,7 +59,6 @@
 
     <modules>
         <module>jmyspell-core</module>
-        <module>jmyspell-myspell-dictionary</module>
         <module>jmyspell-jedit-plugin</module>
         <module>jmyspell-swing</module>
         <module>jmyspell-examples</module>
