@@ -2,58 +2,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>net.oneandone.maven.poms</groupId>
-        <artifactId>foss-parent</artifactId>
-        <version>1.4.8</version>
-    </parent>
-
     <groupId>org.dts.spell</groupId>
     <artifactId>jmyspell</artifactId>
-    <version>1.0-unitedinternet-2-SNAPSHOT</version>
+    <version>1.0-jitsi-1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>jmyspell parent</name>
     <description>JMySpell is a 100% pure-Java implementation of the MySpell spell checker, licensed under the LGPL. This allows us to use the old dictionaries from OpenOffice.org in Java applications, whether they're J2SE applications or J2EE web applications. Since at the moment there is only one 100% Java Open-Source spell checker (Jazzy), and the inclusion of dictionaries is difficult, the objective of this project is to fill this gap.</description>
     <url>http://kenai.com/projects/jmyspell</url>
+
     <licenses>
         <license>
-            <name>LGPL-2.1</name>
-            <url>http://opensource.org/licenses/lgpl-2.1.php</url>
+            <name>LGPL-2.1-only</name>
+            <url>https://spdx.org/licenses/LGPL-2.0-only.html</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <developers>
         <developer>
-            <id>dreamtangerine</id>
-            <name>dreamtangerine</name>
-            <roles>
-                <role>administrator</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>hacklaen</id>
-            <name>hacklaen</name>
-            <roles>
-                <role>observer</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>dressen</id>
-            <name>dressen</name>
-            <roles>
-                <role>observer</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>mfriedenhagen</id>
-            <name>Mirko Friedenhagen</name>
-            <url>https://github.com/mfriedenhagen/</url>
-            <timezone>CET</timezone>
-            <roles>
-                <role>mavenizer</role>
-            </roles>
+            <id>org.jitsi</id>
+            <name>Jitsi Team</name>
+            <email>dev@jitsi.org</email>
         </developer>
     </developers>
 
@@ -65,25 +35,18 @@
     </modules>
 
     <scm>
-        <developerConnection>scm:git:ssh://git@github.com/1and1/jmyspell.git</developerConnection>
-        <connection>scm:git:git://github.com/1and1/jmyspell.git</connection>
-        <url>https://github.com/1and1/jmyspell</url>
+        <developerConnection>scm:git:https://github.com/jitsi/jmyspell</developerConnection>
+        <connection>scm:git:https://github.com/jitsi/jmyspell</connection>
+        <url>https://github.com/jitsi/jmyspell</url>
     </scm>
+
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/1and1/jmyspell/issues</url>
+        <url>https://github.com/jitsi/jmyspell/issues</url>
     </issueManagement>
-    <ciManagement>
-        <system>Jenkins</system>
-        <url>https://huschteguzzel.de/hudson/job/jmyspell/</url>
-    </ciManagement>
 
     <properties>
-        <enforcer.skip>true</enforcer.skip>
-        <pmd.failOnViolation>false</pmd.failOnViolation>
-        <findbugs.failOnError>false</findbugs.failOnError>
-        <jacoco.haltOnFailure>false</jacoco.haltOnFailure>
-        <checkstyle.failOnViolation>false</checkstyle.failOnViolation>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencyManagement>
@@ -103,7 +66,134 @@
                 <artifactId>jmyspell-swing</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.13.1</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>5.1.1</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <_noclassforname>true</_noclassforname>
+                        <Bundle-License>
+                            LGPL-2.1-only;link="https://raw.githubusercontent.com/jitsi/jmyspell/master/LICENSE"
+                        </Bundle-License>
+                        <_removeheaders>
+                            Bnd-*,
+                            Tool,
+                            Require-Capability,
+                            Include-Resource,
+                            Build-Jdk-Spec
+                        </_removeheaders>
+                    </instructions>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <doclint>none</doclint>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.8</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>release-central</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <gpgArguments>
+                                <arg>--pinentry-mode</arg>
+                                <arg>loopback</arg>
+                            </gpgArguments>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 </project>
